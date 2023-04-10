@@ -13,7 +13,7 @@
         position: absolute;
         width: 41px;
         height: 70px;
-        left: 0px;
+        right: -41px;
         top: 24px;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;

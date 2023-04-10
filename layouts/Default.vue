@@ -1,8 +1,7 @@
 <template>
     <Header/>
     <div class="body">
-        <NavigationTab />
-        <MainNavigation />
+        <!-- <MainNavigation /> -->
         <slot />
     </div>
     <Footer/>

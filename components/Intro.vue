@@ -42,8 +42,6 @@
                 @media screen and (min-width: 768px) {
                    display: block;
                 }
-
-
         }
 
         &__container {

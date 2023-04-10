@@ -192,10 +192,14 @@ export default {
                 padding-top: 28px;
             }
 
-            .Accordion__tab{
+            .Accordion__tab {
                 svg {
                     path {
                         fill: white !important;
+                        
+                        &:first-of-type {
+                            transform: rotateX(90deg);
+                        }
                     }
                 }
             }
