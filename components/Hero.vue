@@ -11,8 +11,16 @@
     &__image {
         width: 100%;
         height: auto;
-        max-height: 820px;
         object-fit: cover;
+        max-height: 100vh;
+
+        @media screen and (min-width: 768px) {
+            max-height: 437px;
+        }
+
+        @media screen and (min-width: 1440px) {
+            max-height: 820px;
+        }
     }
 }
 </style>
