@@ -26,7 +26,7 @@
 
 <style lang="scss">
     .Intro {
-        padding: 100px 0;
+        padding: 50px 0;
 
         &__title {
                 color: #0B5841;

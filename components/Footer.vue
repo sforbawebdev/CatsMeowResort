@@ -1,5 +1,6 @@
 <template>
     <footer class="footer">
+        <div class="footer__decor"/>
         <div  class="footer__container">
             <div class="footer__block-left">
                 <div>
@@ -79,16 +80,26 @@
 
 <style lang="scss" scoped>
     .footer {
-        background: #0B5841;
+        background-color: #F2ECE2;
+
+        &__decor {
+            background: #0B5841;
+            height: 45px;
+            width: 100%;
+            display: block;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+        }
 
         &__container {
+            background: #0B5841;
             display: flex;
             justify-content: space-between;
             padding: 25px 36px;
         }
 
         &__logo {
-
+            padding-bottom: 42px;
         }
 
         &__social {
@@ -125,6 +136,7 @@
                 line-height: 21px;
                 letter-spacing: -0.02em;
                 color: white;
+                padding-bottom: 12px;
             }
 
             &-list {

@@ -7,19 +7,20 @@
 </template>
 
 <style  lang="scss" scoped>
-button {
-    border: 0;
-    background: #BA692E;
-    position: absolute;
-    width: 41px;
-    height: 70px;
-    left: 0px;
-    top: 24px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0;
-}
+    button {
+        border: 0;
+        background: #BA692E;
+        position: absolute;
+        width: 41px;
+        height: 70px;
+        left: 0px;
+        top: 24px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        cursor: pointer;
+    }
 </style>
