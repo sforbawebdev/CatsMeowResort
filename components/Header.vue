@@ -1,0 +1,27 @@
+<template>
+    <header class="header">
+        <h1 class="header__title">
+            Cat's Meow Resort
+        </h1>
+    </header>
+</template>
+
+<style lang="scss" scoped>
+.header {
+    position: absolute;
+    width: 100%;
+
+    &__title {
+        font-family: 'Asul';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 176px;
+        text-align: center;
+        width: 100%;
+        text-align: center;
+        letter-spacing: -0.05em;
+        line-height: 213px;
+        color: #BA692E;
+    }
+}
+</style>
