@@ -1,3 +1,4 @@
+
 <template>
     <aside class="MainNavigation">
         <div class="MainNavigation__container">
@@ -36,13 +37,19 @@
 <style lang="scss">
     .MainNavigation {
         position: absolute;
-        left: 0;
-        height: 100%;
+        transform: translateX(-86vw);
+        height: 100vh;
         width: 86vw;
         background-color: #BA692E;
+        transition: all ease-in-out 250ms;
+
+        &.open {
+            transform: translateX(0vw);    
+        }
 
         @media screen and (min-width: 1440px) {
             width: 50vw;
+            transform: translateX(-50vw);
         }
 
         &__list {

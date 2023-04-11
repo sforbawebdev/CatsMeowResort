@@ -1,21 +1,13 @@
 // store.js
-import { onMounted, reactive } from "vue";
+import { reactive } from "vue";
 
+const AppState = reactive({
+  menu_open: false,
+})
+
+function toggleMenu() {
+  AppState.menu_open = !AppState.menu_open;
+}
 export default {
-  setup() {
-    const state = reactive({
-      data: null,
-    });
-
-
-    onMounted(async () => {
-      const response = await fetch("/data.json");
-      
-      console.log(response);
-      state.data = await response.json();
-    });
-    return {
-      state,
-    };
-  },
-};
+  AppState, toggleMenu
+}
