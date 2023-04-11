@@ -1,3 +1,7 @@
+<script>
+
+</script>
+
 <template>
    <Hero/>
    <Container>
@@ -5,6 +9,3 @@
         <Accordion />
    </Container>
 </template>
-
-<script setup>
-</script>

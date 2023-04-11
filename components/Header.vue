@@ -22,9 +22,11 @@
         line-height: 213px;
         color: #BA692E;
         font-size: 90px;
+        line-height: 80px;
 
         @media screen and (min-width: 1440px) {
             font-size: 176px;
+            line-height: 213px;
         }
     }
 }

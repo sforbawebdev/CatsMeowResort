@@ -46,19 +46,29 @@
 
         &__container {
             display: flex;
-            flex-direction: row;
             justify-content: center;
+            flex-direction: column;
+
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+            }
         }
 
         &__image {
             display: flex;
             align-items: center;
+            width: 100%;
+
+            @media screen and (min-width: 1440px) {
+                width: auto;
+            }
 
             @media screen and (min-width: 1440px) {
                 align-items: flex-end;
             }
 
             img {
+                width: 100%;
                 border-radius: 30px;
             }
         }

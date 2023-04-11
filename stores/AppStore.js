@@ -1,6 +1,21 @@
 // store.js
-import { reactive } from 'vue'
+import { onMounted, reactive } from "vue";
 
-export const store = reactive({
-  count: 0
-})
+export default {
+  setup() {
+    const state = reactive({
+      data: null,
+    });
+
+
+    onMounted(async () => {
+      const response = await fetch("/data.json");
+      
+      console.log(response);
+      state.data = await response.json();
+    });
+    return {
+      state,
+    };
+  },
+};

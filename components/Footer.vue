@@ -96,6 +96,11 @@
             display: flex;
             justify-content: space-between;
             padding: 25px 36px;
+            flex-direction: column;
+
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+            }
         }
 
         &__logo {

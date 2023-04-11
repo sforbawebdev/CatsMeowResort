@@ -10,12 +10,14 @@
 
     &__image {
         width: 100%;
-        height: auto;
-        object-fit: cover;
+        height: 100vh;
         max-height: 100vh;
+        object-fit: cover;
+        object-position: 10%;
 
         @media screen and (min-width: 768px) {
             max-height: 437px;
+            height: auto;
         }
 
         @media screen and (min-width: 1440px) {

@@ -113,7 +113,11 @@ export default {
 
     &__container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
     }
 
     &__title {
@@ -143,11 +147,15 @@ export default {
     }
 
     &__block {
-        width: 50%;
         padding: 0px 18px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: 50%;
+        }
     }
 
     &__image {
