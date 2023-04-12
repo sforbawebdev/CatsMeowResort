@@ -97,7 +97,11 @@
                 max-height: 24px;
                 padding-left: 18px;
                 padding-right: 18px;
+                transition: all ease-in-out 250ms;
 
+                &:hover {
+                    opacity: 0.8;
+                }
                 &:first-of-type {
                     padding-left: 0;
                 }
