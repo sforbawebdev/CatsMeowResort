@@ -4,7 +4,6 @@
 
     function toggleAccordion() {
         open.value = !open.value;
-        console.log(menu_open.value);
     }
 </script>
 

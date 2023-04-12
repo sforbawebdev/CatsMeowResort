@@ -24,6 +24,20 @@
 <style lang="scss" scoped>
     .body {
         background-color: #F2ECE2;
+        transition: opacity ease-in-out 250ms;
+
+        &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                background-color: rgba(0, 0, 0, 0.24);
+                visibility: hidden;
+                opacity: 0;
+
+        }
     }
     .scrim {
             max-height: 100vh;
@@ -31,14 +45,8 @@
             position: relative;
 
             &::after {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 100vw;
-                height: 100vh;
-                top: 0;
-                background-color: rgba(0, 0, 0, 0.24);
-
+                opacity: 1;
+                visibility: visible;
             }
     }
 </style>
