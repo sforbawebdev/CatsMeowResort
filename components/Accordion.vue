@@ -54,7 +54,7 @@
         font-weight: 400;
         font-size: 40px;
         line-height: 48px;
-        letter-spacing: -0.02em;
+        
         color: #0B5841;
         width: 100%;
         display: none;
@@ -63,15 +63,20 @@
         word-wrap: break-word;
 
         @media screen and (min-width: 768px) {
+            font-size: 35px;
+        }
+
+        @media screen and (min-width: 992px) {
             display: block;
             padding-bottom: 50px;
             padding-top: 45px;
+            letter-spacing: -0.02em;
         }
 
         &.mobile {
             display: block;
 
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 992px) {
                 display: none;
             }
         }
@@ -101,9 +106,14 @@
 
         @media screen and (min-width: 768px) {
             width: 50%;
+            padding: 0px 12px;
+        }
+
+        @media screen and (min-width: 992px) {
             padding: 0px 18px;
         }
     }
+
     &__list {
         padding-bottom: 60px;
 
@@ -111,6 +121,7 @@
             padding-bottom: 0;
         }
     }
+
     &__image {
         display: block;
         margin: 0 auto;

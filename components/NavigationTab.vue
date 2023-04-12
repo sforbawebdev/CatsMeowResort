@@ -26,7 +26,7 @@ export default {
         position: fixed;
         width: 41px;
         height: 70px;
-        left: 0;
+        left: -1px;
         transform: translateX(0vw);
         top: 24px;
         border-top-right-radius: 20px;
@@ -39,8 +39,17 @@ export default {
         z-index: 1;
         transition: all ease-in-out 250ms;
 
+        @media screen and (min-width: 1280px) {
+            top: 71px;
+        }
+
         &.open {
-            transform: translateX(50vw);  
+            transform: translateX(86vw);
+
+            @media screen and (min-width: 1280px) {
+                transform: translateX(50vw);
+            }
+
         }
     }
 </style>

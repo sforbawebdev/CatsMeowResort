@@ -30,7 +30,7 @@
             transform: translateX(0vw);    
         }
 
-        @media screen and (min-width: 1440px) {
+        @media screen and (min-width: 1280px) {
             width: 50vw;
             transform: translateX(-50vw);
         }
@@ -38,7 +38,7 @@
         &__list {
             padding: 60px 24px;
 
-            @media screen and (min-width: 1440px) {
+            @media screen and (min-width: 1280px) {
                 padding: 60px;
             }
         }

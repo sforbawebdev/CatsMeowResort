@@ -34,20 +34,22 @@
 <style lang="scss">
     .Intro {
         padding: 50px 0;
+        font-style: normal;
 
         &__title {
                 color: #0B5841;
                 font-family: 'Asul';
-                font-style: normal;
                 font-weight: 400;
-                font-size: 80px;
-                line-height: 97px;
                 text-align: center;
                 margin-left: 58px;
                 display: none;
-
-                @media screen and (min-width: 768px) {
+                font-size: 42px;
+                line-height: 50px;
+            
+                @media screen and (min-width: 992px) {
                    display: block;
+                   font-size: 80px;
+                    line-height: 97px;
                 }
         }
 
@@ -84,28 +86,27 @@
             display: flex;
             flex-direction: column;
             color: #0B5841;
-            max-width: 550px;
             padding-left: 0;
 
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 767px) {
                 padding-left: 25px;
+                max-width: 50%;
             }
 
-            @media screen and (min-width: 1440px) {
+            @media screen and (min-width: 1280px) {
                 padding-left: 153px;
+                max-width: 550px;
             }          
   
             &-title {
                 font-family: 'Asul';
-                font-style: normal;
                 font-weight: 400;
                 font-size: 42px;
                 line-height: 50px;
                 padding-bottom: 30px;
                 display: none;
-                padding-top: 30px;
 
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: 992px) {
                     padding-top: 0;
                     display: block;
                     font-size: 80px;
@@ -115,7 +116,13 @@
 
                 &.mobile {
                     display: block;
+                    padding: 30px;
+
                     @media screen and (min-width: 768px) {
+                        padding: 0;
+                    }
+
+                    @media screen and (min-width: 992px) {
                         display: none;
                     }
                 }
@@ -124,13 +131,12 @@
 
         &__copy {
             font-family: 'Chivo';
-            font-style: normal;
             font-weight: 400;
             padding-bottom: 40px;
             font-size: 14px;
             line-height: 22px;
 
-            @media screen and (min-width: 1440px) {
+            @media screen and (min-width: 992px) {
                 font-size: 20px;
                 line-height: 30px;
             } 
@@ -148,10 +154,9 @@
             background: #0B5841;
             border-radius: 30px;
             color: white;
-            padding: 20px 55px;
+
             font-family: 'Chivo';
             max-height: 60px;
-            font-style: normal;
             font-weight: 600;
             font-size: 16px;
             line-height: 19px;
@@ -162,6 +167,13 @@
             text-decoration: none;
             border: 1px solid transparent;
             transition:  all ease-in-out 250ms;
+            padding: 14px 37px;
+    
+            @media screen and (min-width: 992px) {
+                font-size: 20px;
+                line-height: 30px;
+                padding: 20px 55px;
+            } 
 
             &:hover {
                 color: #0B5841;

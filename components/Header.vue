@@ -32,10 +32,15 @@
         line-height: 80px;
         padding-top: 94px;
 
-        @media screen and (min-width: 1440px) {
+        @media screen and (min-width: 768px) {
+            padding-top: 10px;
+        }
+
+        @media screen and (min-width: 1280px) {
             font-size: 176px;
             line-height: 213px;
             padding-top: 0;
+
         }
     }
 }

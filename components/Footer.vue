@@ -51,6 +51,8 @@
             border-top-right-radius: 30px;
             border-top-left-radius: 30px;
             height: 20px;
+            position: relative;
+            bottom: -1px;
 
             @media screen and (min-width: 768px) {
                 height: 45px;
@@ -140,7 +142,21 @@
             }
 
             &-block {
-                width: 196px;
+                width: auto;
+                padding-right: 0;
+
+                @media screen and (min-width: 768px) {
+                    &:first-of-type {
+                        padding-right: 105px;
+                    }
+                }  
+
+                @media screen and (min-width: 992px) {
+                    width: 196px;
+                    &:first-of-type {
+                        padding-right: 0;
+                    }
+                }
             }
         }
     }

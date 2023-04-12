@@ -9,10 +9,15 @@
         font-family: Chivo;
         padding: 50px 24px;
         margin: 0 auto;
-        max-width: 1440px;
+        max-width: 98vw;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 767px) {
+            max-width: 92vw;
+        }
+
+        @media screen and (min-width: 992px) {
             padding: 50px 36px;
+            max-width: 1440px;
         }
     }
 </style>

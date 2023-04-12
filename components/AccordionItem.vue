@@ -42,15 +42,16 @@
             border-radius: 30px;
             cursor: pointer;
             transition:  all ease-in-out 250ms;
-            padding: 19px 24px;
+            padding: 19px;
 
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 992px) {
                 padding: 20px 36px;
             }
 
             &.open {
                 background-color:#0B5841;
                 color: white;
+
                 .AccordionItem__content {
                     height: auto;
                     overflow: visible;
