@@ -68,6 +68,7 @@
 
         @media screen and (min-width: 992px) {
             display: block;
+            font-size: 40px;
             padding-bottom: 50px;
             padding-top: 45px;
             letter-spacing: -0.02em;
