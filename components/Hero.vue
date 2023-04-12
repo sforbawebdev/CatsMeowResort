@@ -20,6 +20,10 @@
             height: auto;
         }
 
+        @media screen and (min-width: 768px) {
+            max-height: 80vh;
+        }
+
         @media screen and (min-width: 1280px) {
             max-height: 820px;
         }
