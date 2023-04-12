@@ -125,6 +125,7 @@ import AccordionItem from './AccordionItem.vue';
         letter-spacing: -0.02em;
         color: #0B5841;
         padding-bottom: 50px;
+        width: 100%;
 
         span {
             display: block;
@@ -137,19 +138,21 @@ import AccordionItem from './AccordionItem.vue';
 
             &:last-of-type {
                 text-align: right;
+                word-wrap: break-word;
             }
         }
 
     }
 
     &__block {
-        padding: 0px 18px;
         display: flex;
         flex-direction: column;
         width: 100%;
+        padding: 0;
 
         @media screen and (min-width: 768px) {
             width: 50%;
+            padding: 0px 18px;
         }
     }
 
