@@ -47,6 +47,12 @@
             &:not(.open):hover {
                 background-color:#0B5841;
                 color: white;
+
+                svg {
+                        path {
+                            fill: white !important;
+                        }
+                    }
             }
     
             @media screen and (min-width: 992px) {
