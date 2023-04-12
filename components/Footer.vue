@@ -84,11 +84,15 @@
 
         &__decor {
             background: #0B5841;
-            height: 45px;
             width: 100%;
             display: block;
             border-top-right-radius: 30px;
             border-top-left-radius: 30px;
+            height: 20px;
+
+            @media screen and (min-width: 768px) {
+                height: 45px;
+            }
         }
 
         &__container {
@@ -104,13 +108,24 @@
         }
 
         &__logo {
-            padding-bottom: 42px;
+            padding-bottom: 36px;
+            max-width: 240px;
+
+            @media screen and (min-width: 768px) {
+                padding-bottom: 42px;
+                max-width: none;
+            }
         }
 
         &__social {
             &-list {
                 display: flex;
                 flex-direction: row;
+                padding-bottom: 60px;
+
+                @media screen and (min-width: 768px) {
+                    padding-bottom: 0;
+                }
             }
 
             &-item {
@@ -144,10 +159,6 @@
                 padding-bottom: 12px;
             }
 
-            &-list {
-
-            }
-
             &-item {
                 font-family: 'Chivo';
                 font-style: normal;
@@ -158,6 +169,11 @@
                 a {
                     color: white;
                     text-decoration: none;
+                    transition: all ease-in 250ms;
+
+                    &:hover {
+                        font-weight: bold;
+                    }
                 }
             }
 

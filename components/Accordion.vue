@@ -1,6 +1,15 @@
-<script>
-import AccordionItem from './AccordionItem.vue';
-
+<script setup>
+    // export default {
+    //     props: ['data'],
+    //     created() {
+    //         console.log(this.data)
+    //         const {accordion_items, headline_1, headline_2, image_src} = this.data;
+    //         console.log(accordion_items)
+    //     }
+    // }
+    const props = defineProps(['data']);
+    console.log(props.data);
+    const {accordion_items, headline_1, headline_2, image_src} = props.data;
 </script>
 <template>
     <div class="Accordion">
@@ -8,18 +17,21 @@ import AccordionItem from './AccordionItem.vue';
             <div class="Accordion__block">
                 <h2  class="Accordion__title">
                     <span>
-                        Pamper your cat to
+                        {{ headline_1 }}
                     </span>
                     <span>
-                        Purrrrrrrrrrrfection
+                        {{ headline_2 }}
                     </span>
+                </h2>
+                <h2  class="Accordion__title mobile">
+                    {{ headline_1 }}  {{ headline_2 }}
                 </h2>
                 <div  class="Accordion__wrap">
                     <ul class="Accordion__list">
-                        <li class="Accordion__item">
-                            <AccordionItem />
+                        <li v-for="item in accordion_items" class="Accordion__item">
+                            <AccordionItem :data="item"/>
                         </li>
-                        <li class="Accordion__item">
+                        <!-- <li class="Accordion__item">
                             <div class="Accordion__panel">
                                 <div class="Accordion__tab">
                                     <span>
@@ -90,7 +102,7 @@ import AccordionItem from './AccordionItem.vue';
                                     </p>
                                 </div>
                             </div>
-                        </li>                                        
+                        </li>                                         -->
                     </ul>
                 </div>
             </div>
@@ -124,8 +136,25 @@ import AccordionItem from './AccordionItem.vue';
         line-height: 48px;
         letter-spacing: -0.02em;
         color: #0B5841;
-        padding-bottom: 50px;
         width: 100%;
+        display: none;
+        padding-bottom: 30px;
+        padding-top: 0;
+        word-wrap: break-word;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+            padding-bottom: 50px;
+            padding-top: 45px;
+        }
+
+        &.mobile {
+            display: block;
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
 
         span {
             display: block;

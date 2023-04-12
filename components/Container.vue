@@ -7,7 +7,7 @@
 <style lang="scss" scoped>
     .container {
         font-family: Chivo;
-        padding: 20px 18px;
+        padding: 50px 24px;
         margin: 0 auto;
         max-width: 1440px;
 

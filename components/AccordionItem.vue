@@ -1,7 +1,9 @@
 <script setup>
     import { ref } from 'vue';
-    let open = ref(false);
+    const props = defineProps(['data']);
+    const {title, copy} = props.data;
 
+    let open = ref(false);
     function toggleAccordion() {
         open.value = !open.value;
     }
@@ -11,7 +13,7 @@
     <div class="AccordionItem__panel" @click="toggleAccordion" :class="{open: open}">
         <div class="AccordionItem__tab">
             <span>
-                Dining         
+                {{ title }}        
             </span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.7813 6.5835e-07C8.19551 0.000543537 8.53085 0.33677 8.53031 0.750983L8.51196 14.751C8.51142 15.1652 8.17519 15.5005 7.76098 15.5C7.34677 15.4995 7.01142 15.1632 7.01196 14.749L7.03031 0.749017C7.03086 0.334804 7.36708 -0.00054228 7.7813 6.5835e-07Z" fill="#0B5841"/>
@@ -20,7 +22,7 @@
         </div>
         <div class="AccordionItem__content">
             <p>
-                Grooming services include professional bathing, brush-outs, nail trims, ear cleaning, and even fur styling. The resort also offers spa services such as massages, facials, and aromatherapy treatments to pamper the cats. Grooming and spa services are designed to enhance the cat's physical appearance and overall well-being. Additionally, the resort provides personalized grooming services tailored to the specific needs of each cat, such as specialized shampoos for sensitive skin or hypoallergenic grooming products for cats with allergies. With professional grooming services, cats can look and feel their best during their stay at the luxury cat resort.
+                {{ copy }}
             </p>
         </div>
     </div>

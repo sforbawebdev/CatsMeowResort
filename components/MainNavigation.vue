@@ -54,7 +54,11 @@
         }
 
         &__list {
-            padding: 60px;
+            padding: 60px 24px;
+
+            @media screen and (min-width: 1440px) {
+                padding: 60px;
+            }
         }
 
         &__link {
@@ -66,6 +70,11 @@
             text-decoration: none;
             font-size: 50px;
             line-height: 60px;
+            transition: all ease-in 250ms;
+
+            &:hover {
+                font-weight: bold;
+            }
 
             @media screen and (min-width: 768px) {
                 font-size: 80px;

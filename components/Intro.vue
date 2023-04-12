@@ -11,6 +11,9 @@
                 <h2  class="Intro__content-title">
                     Play and Stay 
                 </h2>
+                <h2 class="Intro__content-title mobile">
+                    Where cats come to Play and Stay
+                </h2>
                 <p class="Intro__copy">
                     At The Cat's Meow, we understand that your cats are more than just pets - they are family. That's why we provide the highest quality care and attention for our four-legged guests in a safe and luxurious setting. Our resort is uniquely designed to provide enrichment and stimulation in a natural environment, with spacious suites, interactive toys, and plenty of fresh air.
                 </p>
@@ -95,12 +98,23 @@
                 font-size: 42px;
                 line-height: 50px;
                 padding-bottom: 30px;
-    
-                @media screen and (min-width: 1440px) {
+                display: none;
+                padding-top: 30px;
+
+                @media screen and (min-width: 768px) {
+                    padding-top: 0;
+                    display: block;
                     font-size: 80px;
                     line-height: 97px;
                     padding-bottom: 40px;
-                }       
+                }
+
+                &.mobile {
+                    display: block;
+                    @media screen and (min-width: 768px) {
+                        display: none;
+                    }
+                }
             }
         }
 
@@ -108,17 +122,22 @@
             font-family: 'Chivo';
             font-style: normal;
             font-weight: 400;
-            line-height: 30px;
             padding-bottom: 40px;
             font-size: 14px;
+            line-height: 22px;
 
             @media screen and (min-width: 1440px) {
                 font-size: 20px;
+                line-height: 30px;
             } 
         }
 
         &__cta-row {
-            padding-bottom: 40px;
+            padding-bottom: 0;
+
+            @media screen and (min-width: 768px) {
+                padding-bottom: 40px;
+            }
         }
 
         &__cta {
@@ -137,6 +156,14 @@
             width: fit-content;
             letter-spacing: -0.02em;
             text-decoration: none;
+            border: 1px solid transparent;
+            transition:  all ease-in-out 250ms;
+
+            &:hover {
+                color: #0B5841;
+                background-color: white;
+                border: 1px solid #0B5841;
+            }
         }
     }
 </style>

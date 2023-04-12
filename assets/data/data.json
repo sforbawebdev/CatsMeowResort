@@ -22,12 +22,13 @@
 	},
 	"pages": [{
 		"title": "Index",
-		"components": [{
-				"title": "Hero",
-				"data": {
-					"image_src": "/hero-desktop.png"
-				}
-			},
+		"hero": {
+			"title": "Hero",
+			"data": {
+				"image_src": "/hero-desktop.png"
+			}
+		},
+		"components": [
 			{
 				"title": "Intro",
 				"data": {

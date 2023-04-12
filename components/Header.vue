@@ -23,10 +23,12 @@
         color: #BA692E;
         font-size: 90px;
         line-height: 80px;
+        padding-top: 94px;
 
         @media screen and (min-width: 1440px) {
             font-size: 176px;
             line-height: 213px;
+            padding-top: 0;
         }
     }
 }
