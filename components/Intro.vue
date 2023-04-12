@@ -22,8 +22,8 @@
                     {{ copy }}
                 </p>
                 <div class="Intro__cta-row">
-                    <a class="Intro__cta" href="#">
-                        Book Meow
+                    <a class="Intro__cta" :href="cta.url">
+                        {{ cta.label }}
                     </a>
                 </div>
             </div>            

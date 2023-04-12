@@ -1,6 +1,5 @@
 <script setup>
     const props = defineProps(['data']);
-    console.log(props.data);
     const {accordion_items, headline_1, headline_2, image_src} = props.data;
 </script>
 <template>
