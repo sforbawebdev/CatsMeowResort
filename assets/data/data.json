@@ -4,20 +4,61 @@
 			"title": "Cats Meow Resort"
 		},
 		"footer": {
+			"footer_logo": "/logo.svg",
 			"social_list": [{
 					"label": "Instagram",
+					"icon": "/insta.svg",
 					"url": "#"
 				},
 				{
 					"label": "Facebook",
+					"icon": "/facebook.svg",
 					"url": "#"
 				},
 				{
 					"label": "Twitter",
+					"icon": "/twitter.svg",
 					"url": "#"
 				}
 			],
-			"navigation": ["footer_nav_1", "footer_nav_2"]
+			"navigation": [
+				{
+					"slug": "footer_nav_1",
+					"title": "Company",
+					"data": [
+						{
+							"label": "About Us",
+							"url": "/"
+						},
+						{
+							"label": "Stay",
+							"url": "/"
+						},
+						{
+							"label": "Grooming",
+							"url": "/"
+						}
+					]
+				},
+				{
+					"slug": "footer_nav_2",
+					"title": "Support",
+					"data": [
+						{
+							"label": "FAQ",
+							"url": "/"
+						},
+						{
+							"label": "Privacy",
+							"url": "/"
+						},
+						{
+							"label": "Terms & Policy",
+							"url": "/"
+						}
+					]
+				}
+			]
 		}
 	},
 	"pages": [{

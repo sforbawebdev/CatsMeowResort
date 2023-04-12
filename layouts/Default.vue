@@ -1,6 +1,11 @@
 <script setup>
     import { ref } from 'vue';
+    import data from '../assets/data/data.json';
 
+    const layoutData = data?.layout;
+    console.log(layoutData);
+    let navigationData = data?.navigation.filter(data => data.slug === 'main_navigation');
+    navigationData = navigationData && navigationData[0] && navigationData[0]?.data;
     let menu_open = ref(false);
 
     function toggleMenu() {
@@ -11,14 +16,14 @@
 
 <template>
     <div :class="{ scrim: menu_open }">
-        <Header/>
+        <Header :data="layoutData.header"/>
         <div class="body" :class="{ scrim: menu_open }">
             <div @click="toggleMenu" >
-                <MainNavigation :class="{ open: menu_open }"/>
+                <MainNavigation :class="{ open: menu_open }" :data="navigationData" />
             </div>
             <slot />
         </div>
-        <Footer/>
+        <Footer :data="layoutData.footer" />
     </div>
 </template>
 

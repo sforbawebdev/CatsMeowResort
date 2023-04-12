@@ -1,7 +1,12 @@
+<script setup>
+    const props = defineProps(['data']);
+    const {data} = props;
+</script>
+
 <template>
     <header class="header">
         <h1 class="header__title">
-            Cat's Meow Resort
+            {{ data?.title }}
         </h1>
     </header>
 </template>

@@ -1,26 +1,20 @@
+<script setup>
+    const props = defineProps(['data']);
+    const {navigation, social_list, footer_logo } = props.data;
+</script>
 <template>
     <footer class="footer">
-        <div class="footer__decor"/>
+        <div class="footer__decor" />
         <div  class="footer__container">
             <div class="footer__block-left">
                 <div>
-                   <img  class="footer__logo" src="/logo.svg" />
+                   <img  class="footer__logo" :src="footer_logo" />
                 </div>
                 <div class="footer__social">
                     <ul class="footer__social-list">
-                        <li class="footer__social-item">
-                            <a href="">
-                                <img src="/insta.svg" />
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="">
-                                <img src="/facebook.svg" />
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="">
-                                <img src="/twitter.svg" />
+                        <li v-for="social in social_list" class="footer__social-item">
+                            <a :href="social.url">
+                                <img :src="social.icon" />
                             </a>
                         </li>
                     </ul>
@@ -28,50 +22,18 @@
             </div>
             <div class="footer__block-right">
                 <div class="footer__navigation">
-                    <div class="footer__navigation-block">
-                    <h4 class="footer__navigation-title">
-                        Company
-                    </h4>
-                    <ul class="footer__navigation-list">
-                        <li class="footer__navigation-item">
-                            <a href="#">
-                                About Us
-                            </a>
-                        </li>
-                        <li class="footer__navigation-item">
-                            <a href="#">
-                                Stay
-                            </a>
-                        </li>
-                        <li  class="footer__navigation-item">
-                            <a href="#">
-                                Grooming
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__navigation-block">
-                    <h4 class="footer__navigation-title">
-                    Support
-                    </h4>
-                    <ul class="footer__navigation-list">
-                        <li class="footer__navigation-item">
-                            <a href="#">
-                                FAQ
-                            </a>
-                        </li>
-                        <li class="footer__navigation-item">
-                            <a href="#">
-                                Privacy
-                            </a>
-                        </li>
-                        <li  class="footer__navigation-item">
-                            <a href="#">
-                                Terms & Policy
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <div v-for="nav_block in navigation" class="footer__navigation-block">
+                        <h4 class="footer__navigation-title">
+                            {{ nav_block.title }}
+                        </h4>
+                        <ul class="footer__navigation-list" v-for="nav_item in nav_block.data">
+                            <li class="footer__navigation-item">
+                                <a :href="nav_item.url">
+                                    {{ nav_item.label }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
