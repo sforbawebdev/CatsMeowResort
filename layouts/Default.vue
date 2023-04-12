@@ -3,23 +3,22 @@
     import data from '../assets/data/data.json';
 
     const layoutData = data?.layout;
-    console.log(layoutData);
     let navigationData = data?.navigation.filter(data => data.slug === 'main_navigation');
     navigationData = navigationData && navigationData[0] && navigationData[0]?.data;
     let menu_open = ref(false);
 
     function toggleMenu() {
         menu_open.value = !menu_open.value;
-        console.log(menu_open.value);
     }
 </script>
 
 <template>
     <div :class="{ scrim: menu_open }">
-        <Header :data="layoutData.header"/>
+        <Header :data="layoutData.header" />
         <div class="body" :class="{ scrim: menu_open }">
-            <div @click="toggleMenu" >
+            <div class="body__nav-wrap">
                 <MainNavigation :class="{ open: menu_open }" :data="navigationData" />
+                <NavigationTab :class="{ open: menu_open }"  @clickTab="toggleMenu"/>
             </div>
             <slot />
         </div>
@@ -32,6 +31,10 @@
         background-color: #F2ECE2;
         transition: opacity ease-in-out 250ms;
 
+        &__nav-wrap {
+            position: relative;
+        }
+    
         &::after {
                 content: "";
                 display: block;

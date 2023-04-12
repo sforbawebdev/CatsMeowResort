@@ -13,7 +13,6 @@
                 </li>
             </ul>
         </div>
-        <NavigationTab />
     </aside>
 </template>
 
