@@ -10,7 +10,7 @@
     button {
         border: 0;
         background: #BA692E;
-        position: absolute;
+        position: fixed;
         width: 41px;
         height: 70px;
         right: -41px;

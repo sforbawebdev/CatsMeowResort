@@ -40,6 +40,7 @@
         transform: translateX(-86vw);
         height: 100vh;
         width: 86vw;
+        z-index: 1;
         background-color: #BA692E;
         transition: all ease-in-out 250ms;
 

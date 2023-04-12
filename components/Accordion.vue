@@ -1,13 +1,6 @@
 <script>
-export default {
-  data() {
-    return { a: 1 }
-  },
-  created() {
-    console.log(this.a) // 1
-    console.log(this.$data) // { a: 1 }
-  }
-}
+import AccordionItem from './AccordionItem.vue';
+
 </script>
 <template>
     <div class="Accordion">
@@ -23,6 +16,9 @@ export default {
                 </h2>
                 <div  class="Accordion__wrap">
                     <ul class="Accordion__list">
+                        <li class="Accordion__item">
+                            <AccordionItem />
+                        </li>
                         <li class="Accordion__item">
                             <div class="Accordion__panel">
                                 <div class="Accordion__tab">
@@ -150,7 +146,6 @@ export default {
         padding: 0px 18px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         width: 100%;
 
         @media screen and (min-width: 768px) {
