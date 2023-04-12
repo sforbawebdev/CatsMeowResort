@@ -40,9 +40,13 @@
             color: #0B5841;
             border: 1px solid #0B5841;
             border-radius: 30px;
-            padding: 20px 36px;
             cursor: pointer;
             transition:  all ease-in-out 250ms;
+            padding: 19px 24px;
+
+            @media screen and (min-width: 768px) {
+                padding: 20px 36px;
+            }
 
             &.open {
                 background-color:#0B5841;
@@ -72,6 +76,8 @@
             align-items: center;
             justify-content: space-between;
             font-weight: 600;
+            font-size: 18px;
+            line-height: 21px;
         }
 
         &__content {

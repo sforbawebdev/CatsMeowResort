@@ -104,7 +104,13 @@
             padding: 0px 18px;
         }
     }
+    &__list {
+        padding-bottom: 60px;
 
+        @media screen and (min-width: 768px) {
+            padding-bottom: 0;
+        }
+    }
     &__image {
         display: block;
         margin: 0 auto;
@@ -124,48 +130,6 @@
         &:last-of-type {
             margin-bottom: 0;
         }
-    }
-
-    &__panel {
-        font-family: 'Chivo';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        letter-spacing: -0.02em;
-        color: #0B5841;
-        border: 1px solid #0B5841;
-        border-radius: 30px;
-        padding: 20px 36px;
-        cursor: pointer;
-        &.open {
-            background-color:#0B5841;
-            color: white;
-            .Accordion__content{
-                height: auto;
-                overflow: visible;
-                padding-top: 28px;
-            }
-
-            .Accordion__tab {
-                svg {
-                    path {
-                        fill: white !important;
-                        
-                        &:first-of-type {
-                            transform: rotateX(90deg);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &__tab {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-weight: 600;
     }
 }
 </style>
