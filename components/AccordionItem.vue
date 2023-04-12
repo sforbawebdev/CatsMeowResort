@@ -44,6 +44,11 @@
             transition:  all ease-in-out 250ms;
             padding: 19px;
 
+            &:not(.open):hover {
+                background-color:#0B5841;
+                color: white;
+            }
+    
             @media screen and (min-width: 992px) {
                 padding: 20px 36px;
             }
