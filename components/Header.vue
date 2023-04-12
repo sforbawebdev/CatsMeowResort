@@ -12,6 +12,8 @@
     width: 100%;
 
     &__title {
+        position: relative;
+        z-index: 1;
         font-family: 'Asul';
         font-style: normal;
         font-weight: 400;

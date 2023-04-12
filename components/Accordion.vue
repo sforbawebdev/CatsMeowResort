@@ -1,12 +1,4 @@
 <script setup>
-    // export default {
-    //     props: ['data'],
-    //     created() {
-    //         console.log(this.data)
-    //         const {accordion_items, headline_1, headline_2, image_src} = this.data;
-    //         console.log(accordion_items)
-    //     }
-    // }
     const props = defineProps(['data']);
     console.log(props.data);
     const {accordion_items, headline_1, headline_2, image_src} = props.data;
@@ -31,83 +23,11 @@
                         <li v-for="item in accordion_items" class="Accordion__item">
                             <AccordionItem :data="item"/>
                         </li>
-                        <!-- <li class="Accordion__item">
-                            <div class="Accordion__panel">
-                                <div class="Accordion__tab">
-                                    <span>
-                                        Dining         
-                                    </span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.7813 6.5835e-07C8.19551 0.000543537 8.53085 0.33677 8.53031 0.750983L8.51196 14.751C8.51142 15.1652 8.17519 15.5005 7.76098 15.5C7.34677 15.4995 7.01142 15.1632 7.01196 14.749L7.03031 0.749017C7.03086 0.334804 7.36708 -0.00054228 7.7813 6.5835e-07Z" fill="#0B5841"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.75C0 7.33579 0.335786 7 0.75 7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H0.75C0.335786 8.5 0 8.16421 0 7.75Z" fill="#0B5841"/>
-                                    </svg>
-                                </div>
-                                <div class="Accordion__content">
-                                    <p>
-                                        Grooming services include professional bathing, brush-outs, nail trims, ear cleaning, and even fur styling. The resort also offers spa services such as massages, facials, and aromatherapy treatments to pamper the cats. Grooming and spa services are designed to enhance the cat's physical appearance and overall well-being. Additionally, the resort provides personalized grooming services tailored to the specific needs of each cat, such as specialized shampoos for sensitive skin or hypoallergenic grooming products for cats with allergies. With professional grooming services, cats can look and feel their best during their stay at the luxury cat resort.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="Accordion__item">
-                            <div class="Accordion__panel open">
-                                <div class="Accordion__tab">
-                                    <span>
-                                        Grooming and Spa Services
-                                    </span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.7813 6.5835e-07C8.19551 0.000543537 8.53085 0.33677 8.53031 0.750983L8.51196 14.751C8.51142 15.1652 8.17519 15.5005 7.76098 15.5C7.34677 15.4995 7.01142 15.1632 7.01196 14.749L7.03031 0.749017C7.03086 0.334804 7.36708 -0.00054228 7.7813 6.5835e-07Z" fill="#0B5841"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.75C0 7.33579 0.335786 7 0.75 7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H0.75C0.335786 8.5 0 8.16421 0 7.75Z" fill="#0B5841"/>
-                                    </svg>
-                                </div>
-                                <div class="Accordion__content">
-                                    <p>
-                                        Grooming services include professional bathing, brush-outs, nail trims, ear cleaning, and even fur styling. The resort also offers spa services such as massages, facials, and aromatherapy treatments to pamper the cats. Grooming and spa services are designed to enhance the cat's physical appearance and overall well-being. Additionally, the resort provides personalized grooming services tailored to the specific needs of each cat, such as specialized shampoos for sensitive skin or hypoallergenic grooming products for cats with allergies. With professional grooming services, cats can look and feel their best during their stay at the luxury cat resort.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="Accordion__item">
-                            <div class="Accordion__panel">
-                                <div class="Accordion__tab">
-                                    <span>
-                                        Playtime and Enrichment    
-                                    </span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.7813 6.5835e-07C8.19551 0.000543537 8.53085 0.33677 8.53031 0.750983L8.51196 14.751C8.51142 15.1652 8.17519 15.5005 7.76098 15.5C7.34677 15.4995 7.01142 15.1632 7.01196 14.749L7.03031 0.749017C7.03086 0.334804 7.36708 -0.00054228 7.7813 6.5835e-07Z" fill="#0B5841"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.75C0 7.33579 0.335786 7 0.75 7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H0.75C0.335786 8.5 0 8.16421 0 7.75Z" fill="#0B5841"/>
-                                    </svg>
-                                </div>
-                                <div class="Accordion__content">
-                                    <p>
-                                        Grooming services include professional bathing, brush-outs, nail trims, ear cleaning, and even fur styling. The resort also offers spa services such as massages, facials, and aromatherapy treatments to pamper the cats. Grooming and spa services are designed to enhance the cat's physical appearance and overall well-being. Additionally, the resort provides personalized grooming services tailored to the specific needs of each cat, such as specialized shampoos for sensitive skin or hypoallergenic grooming products for cats with allergies. With professional grooming services, cats can look and feel their best during their stay at the luxury cat resort.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="Accordion__item">
-                            <div class="Accordion__panel">
-                                <div class="Accordion__tab">
-                                    <span>
-                                        Pet Photography and Social Media       
-                                    </span>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.7813 6.5835e-07C8.19551 0.000543537 8.53085 0.33677 8.53031 0.750983L8.51196 14.751C8.51142 15.1652 8.17519 15.5005 7.76098 15.5C7.34677 15.4995 7.01142 15.1632 7.01196 14.749L7.03031 0.749017C7.03086 0.334804 7.36708 -0.00054228 7.7813 6.5835e-07Z" fill="#0B5841"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.75C0 7.33579 0.335786 7 0.75 7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H0.75C0.335786 8.5 0 8.16421 0 7.75Z" fill="#0B5841"/>
-                                    </svg>
-                                </div>
-                                <div class="Accordion__content">
-                                    <p>
-                                        Grooming services include professional bathing, brush-outs, nail trims, ear cleaning, and even fur styling. The resort also offers spa services such as massages, facials, and aromatherapy treatments to pamper the cats. Grooming and spa services are designed to enhance the cat's physical appearance and overall well-being. Additionally, the resort provides personalized grooming services tailored to the specific needs of each cat, such as specialized shampoos for sensitive skin or hypoallergenic grooming products for cats with allergies. With professional grooming services, cats can look and feel their best during their stay at the luxury cat resort.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>                                         -->
                     </ul>
                 </div>
             </div>
             <div class="Accordion__block">
-                <img src="/cat-tongue.png" class="Accordion__image" />
+                <img :src="image_src" class="Accordion__image" />
             </div>
         </div>
     </div>

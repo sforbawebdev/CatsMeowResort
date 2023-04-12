@@ -1,5 +1,6 @@
 <script setup>
     import { ref } from 'vue';
+
     let menu_open = ref(false);
 
     function toggleMenu() {

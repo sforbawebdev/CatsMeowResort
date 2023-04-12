@@ -1,31 +1,16 @@
-
+<script setup>
+    import data from '../assets/data/data.json';
+    let navigationData = data?.navigation.filter(data => data.slug === 'main_navigation');
+    navigationData = navigationData && navigationData[0] && navigationData[0]?.data;
+    console.log(navigationData);
+</script>
 <template>
     <aside class="MainNavigation">
         <div class="MainNavigation__container">
             <ul class="MainNavigation__list">
-                <li  class="MainNavigation__item">
-                    <a href="#" class="MainNavigation__link">
-                        Home
-                    </a>
-                </li>
-                <li class="MainNavigation__item">
-                    <a href="#" class="MainNavigation__link">
-                        About Us
-                    </a>
-                </li>
-                <li class="MainNavigation__item">
-                    <a href="#" class="MainNavigation__link">
-                        Stay
-                    </a>
-                </li>
-                <li class="MainNavigation__item">
-                    <a href="#" class="MainNavigation__link">
-                        Grooming
-                    </a>
-                </li>
-                <li class="MainNavigation__item">
-                    <a href="#" class="MainNavigation__link">
-                        Party
+                <li v-for="item in navigationData" class="MainNavigation__item">
+                    <a :href="item.url" class="MainNavigation__link">
+                        {{ item.label }}
                     </a>
                 </li>
             </ul>

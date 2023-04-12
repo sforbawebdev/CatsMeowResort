@@ -1,21 +1,25 @@
+<script setup>
+    const props = defineProps(['data']);
+    const {headline_1, headline_2, copy, image_src, cta} = props.data;
+</script>
 <template>
     <div class="Intro">
         <div class="Intro__title">
-            Where cats come to 
+            {{ headline_1 }}
         </div>
         <div  class="Intro__container">
             <div class="Intro__image">
-                <img src="/cat-pair-1.png" />
+                <img :src="image_src" />
             </div>
             <div class="Intro__content">
                 <h2  class="Intro__content-title">
-                    Play and Stay 
+                    {{ headline_2 }}
                 </h2>
                 <h2 class="Intro__content-title mobile">
-                    Where cats come to Play and Stay
+                    {{ headline_1 }} {{ headline_2 }}
                 </h2>
                 <p class="Intro__copy">
-                    At The Cat's Meow, we understand that your cats are more than just pets - they are family. That's why we provide the highest quality care and attention for our four-legged guests in a safe and luxurious setting. Our resort is uniquely designed to provide enrichment and stimulation in a natural environment, with spacious suites, interactive toys, and plenty of fresh air.
+                    {{ copy }}
                 </p>
                 <div class="Intro__cta-row">
                     <a class="Intro__cta" href="#">
